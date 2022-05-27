@@ -10,6 +10,7 @@
       height: fit-content;
       margin-left: 5%;
       margin-top: 2%;
+      margin-bottom: 3%;
     }
     
     div.gallery:hover {
@@ -40,7 +41,7 @@
         {% for image in location_images %}
 
         <div class="gallery">          
-            <img  src="{{image.image.url }}" class="img-responsive" alt="Image" style="height: 550px">
+            <img  src="{{image.image.url }}" class="img-responsive" alt="Image" style="height: 500px; width:fit-content;">
               <div class="desc">{{image.description}}</div>
             </div>
 

@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700|Playfair+Display:700" rel="stylesheet">
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/index.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/image.css' %}">
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
   
 
@@ -32,5 +32,7 @@
         <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
      {% bootstrap_javascript %}
     {% endblock %}
+    {% include "footer.html" %}
+
 </body>
 </html>
