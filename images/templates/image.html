@@ -8,6 +8,8 @@
     float: left;
     width: 500px;
     height: fit-content;
+    margin-left: 5%;
+    margin-top: 2%;
   }
   
   div.gallery:hover {
@@ -27,13 +29,71 @@
 
   }
   </style>
+  <div class="container">
+    <div class="row">
+  
 
-<span id="locations">
-  {% for location in locations %}
-      <a class="btn btn-outline-info btn-sm" id="btn"
-         href="/location/{{location.location}}">{{location.location}}</a>
-  {%endfor%}
-</span>
+      <header class="site-header">
+
+              <div class="col-md-6 col-sm-6 col-lg-6">
+            <div class="hero-copy" style="font-size:40px;position: absolute; left: 30%;">
+              <h1 stle="font-size:60px;"class="hero-title mt-0">WELCOME TO PHOTO GALLERY</h1>
+              <p class="hero-paragraph">Here you can view photos from different categories and Locations.Scroll down to view more!!</p>
+              <div class="hero-cta"><a class="button button-shadow" href="#">Learn more</a><a class="button button-primary button-shadow" href="#">Contact Us</a></div>
+            </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-lg-6">
+              <img style="height: 700px; margin-left:20%;" src="/media/image/iphone-mockup.png" alt="">
+            </div>
+            
+         
+      </header>
+
+    </div>
+  </div>
+      <main>
+          <section class="hero">
+              <div class="container">
+                  <div class="hero-inner">
+          <div class="hero-app">
+            <div class="hero-app-illustration">
+              <svg width="999" height="931" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                      <linearGradient x1="92.827%" y1="0%" x2="53.422%" y2="80.087%" id="hero-shape-a">
+                          <stop stop-color="#F9425F" offset="0%"/>
+                          <stop stop-color="#F97C58" stop-opacity="0" offset="100%"/>
+                      </linearGradient>
+                      <linearGradient x1="92.827%" y1="0%" x2="53.406%" y2="80.12%" id="hero-shape-b">
+                          <stop stop-color="#47A1F9" offset="0%"/>
+                          <stop stop-color="#F9425F" stop-opacity="0" offset="80.532%"/>
+                          <stop stop-color="#FDFFDA" stop-opacity="0" offset="100%"/>
+                      </linearGradient>
+                      <linearGradient x1="8.685%" y1="23.733%" x2="85.808%" y2="82.837%" id="hero-shape-c">
+                          <stop stop-color="#FFF" stop-opacity=".48" offset="0%"/>
+                          <stop stop-color="#FFF" stop-opacity="0" offset="100%"/>
+                      </linearGradient>
+                      <linearGradient x1="79.483%" y1="15.903%" x2="38.42%" y2="70.124%" id="hero-shape-d">
+                          <stop stop-color="#47A1F9" offset="0%"/>
+                          <stop stop-color="#FDFFDA" stop-opacity="0" offset="100%"/>
+                      </linearGradient>
+                      <linearGradient x1="99.037%" y1="26.963%" x2="24.582%" y2="78.557%" id="hero-shape-e">
+                          <stop stop-color="#FDFFDA" stop-opacity=".64" offset="0%"/>
+                          <stop stop-color="#F97C58" stop-opacity=".24" offset="42.952%"/>
+                          <stop stop-color="#F9425F" stop-opacity="0" offset="100%"/>
+                      </linearGradient>
+                  </defs>
+                  
+              </svg>
+            </div>
+    
+          </div>
+                  </div>
+              </div>
+          </section>
+      </main>
+
+  
+          
 
 {% for image in image %}
       <div class="gallery">          

@@ -1,3 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 500px;
+    height: fit-content;
+    margin-left: 5%;
+    margin-top: 2%;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+  
+  
+  }
+  
+  div.desc {
+    padding: 25px;
+    text-align: center;
+    font-size: x-large;
 
+  }

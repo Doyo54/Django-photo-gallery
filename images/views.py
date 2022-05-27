@@ -8,7 +8,9 @@ def home(request):
     print(locations)
     return render(request, 'image.html', {"image":image, 'locations': locations})
 # Create your views here.
-
+def index(request):
+    return render(request, 'index.html')
+    
 def image_location(request, location):
     images = Image.filter_by_location(location)
     print(images)
