@@ -60,5 +60,10 @@ class Image(models.Model):
     def update_image(cls, id, value):
         cls.objects.filter(id=id).update(image=value)
 
+    @classmethod
+    def get_image_by_id(cls, id):
+        image = cls.objects.filter(id=id).all()
+        return image
 
+  
 
