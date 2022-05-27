@@ -1,20 +1,23 @@
-from unicodedata import category
 from django.db import models
-import datetime as dt
 
 class Category(models.Model):
     category = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.category
 
 class Location(models.Model):
     location = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.location
 
 class Image(models.Model):
     name = models.CharField(max_length =30)
     image = models.ImageField(upload_to = 'image/',null =True)
     description = models.CharField(max_length=200)
-    category = models.ForeignKey(Category)
-    location = models.ForeignKey(Location)
+    category = models.ForeignKey(Category,on_delete=models.CASCADE,null=True)
+    location = models.ForeignKey(Location,on_delete=models.CASCADE,null=True)
 
     def __str__(self):
         return self.name
