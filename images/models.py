@@ -24,7 +24,16 @@ class Location(models.Model):
     def get_locations(cls):
         locations = Location.objects.all()
         return locations
-    
+        
+    @classmethod
+    def update_location(cls, id, value):
+        cls.objects.filter(id=id).update(image=value)
+
+    def save_location(self):
+        self.save()
+
+    def delete_location(self):
+        self.delete()
 
 class Image(models.Model):
     name = models.CharField(max_length =30)
