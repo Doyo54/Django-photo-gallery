@@ -19,6 +19,12 @@ class Location(models.Model):
 
     def __str__(self):
         return self.location
+    
+    @classmethod
+    def get_locations(cls):
+        locations = Location.objects.all()
+        return locations
+    
 
 class Image(models.Model):
     name = models.CharField(max_length =30)
