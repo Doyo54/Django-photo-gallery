@@ -1,3 +1,4 @@
+from unicodedata import category
 from django.db import models
 
 class Category(models.Model):
@@ -5,7 +6,6 @@ class Category(models.Model):
 
     def __str__(self):
         return self.category
-    
 
     def save_category(self):
         self.save()
@@ -53,8 +53,13 @@ class Image(models.Model):
 
     @classmethod
     def filter_by_location(cls, location):
-        image_location = Image.objects.filter(location__name=location).all()
+        image_location = Image.objects.filter(location__location=location).all()
         return image_location
+
+    @classmethod
+    def filter_by_category(cls, category):
+        image_category = Image.objects.filter(category__category=category).all()
+        return image_category
 
     @classmethod
     def update_image(cls, id, value):

@@ -1,10 +1,15 @@
 from django.shortcuts import render
-from .models import Image
+from .models import Image,Location
 
 # Create your views here.
 def home(request):
     image = Image.objects.all()
-    return render(request, 'image.html', {"image":image})
+    locations = Location.get_locations()
+    print(locations)
+    return render(request, 'image.html', {"image":image, 'locations': locations})
 # Create your views here.
-def index(request):
-    return render(request,'index.html')
+
+def image_location(request, location):
+    images = Image.filter_by_location(location)
+    print(images)
+    return render(request, 'location.html', {'location_images': images})

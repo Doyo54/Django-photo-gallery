@@ -6,7 +6,8 @@
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
-    width: 700px;
+    width: 500px;
+    height: fit-content;
   }
   
   div.gallery:hover {
@@ -27,9 +28,16 @@
   }
   </style>
 
+<span id="locations">
+  {% for location in locations %}
+      <a class="btn btn-outline-info btn-sm" id="btn"
+         href="/location/{{location.location}}">{{location.location}}</a>
+  {%endfor%}
+</span>
+
 {% for image in image %}
       <div class="gallery">          
-        <img  src="{{image.image.url }}" class="img-responsive" alt="Image" width="600">
+        <img  src="{{image.image.url }}" class="img-responsive" alt="Image" width="200" style="height: 500px; width:auto;">
           <div class="desc">{{image.description}}</div>
         </div>
  
