@@ -13,3 +13,8 @@ def image_location(request, location):
     images = Image.filter_by_location(location)
     print(images)
     return render(request, 'location.html', {'location_images': images})
+
+def image_category(request, category):
+    images = Image.filter_by_category(category)
+    print(images)
+    return render(request, 'location.html', {'location_images': images})
