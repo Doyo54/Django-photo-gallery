@@ -1,49 +1,19 @@
 {% extends 'base.html'%}
 {% block content %} 
-{{ block.super}}
-  <style>
-  div.gallery {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 500px;
-    height: fit-content;
-    margin-left: 5%;
-    margin-top: 2%;
-    margin-bottom: 3%;
-  }
-  
-  div.gallery:hover {
-    border: 1px solid #777;
-  }
-  
-  div.gallery img {
-    width: 100%;
-  
-  
-  }
-  
-  div.desc {
-    padding: 25px;
-    text-align: center;
-    font-size: x-large;
-
-  }
-  </style>
   <div class="container">
     <div class="row">
   
 
       <header class="site-header">
 
-              <div class="col-md-6 col-sm-6 col-lg-6">
+              <div class="col-md-6">
             <div class="hero-copy" style="font-size:40px;position: absolute; left: 30%;">
               <h1 stle="font-size:60px;"class="hero-title mt-0">WELCOME TO PHOTO GALLERY</h1>
               <p class="hero-paragraph">Here you can view photos from different categories and Locations.Scroll down to view more!!</p>
               <div class="hero-cta"><a class="button button-shadow" href="#">Learn more</a><a class="button button-primary button-shadow" href="#">Contact Us</a></div>
             </div>
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-6">
+            <div class="col-md-6">
               <img style="height: 700px; margin-left:20%;" src="/media/image/iphone-mockup.png" alt="">
             </div>
             
@@ -98,7 +68,7 @@
 
 {% for image in image %}
       <div class="gallery">          
-        <img  src="{{image.image.url }}" class="img-responsive" alt="Image" width="200" style="height: 500px; width:auto;">
+        <img  src="{{image.image.url }}" class="img-responsive" alt="Image" style="height: 500px;">
           <div class="desc">{{image.description}}</div>
         </div>
  

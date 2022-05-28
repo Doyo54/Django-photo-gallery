@@ -1,39 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-{{block.super}}
-<style>
-    div.gallery {
-      margin: 5px;
-      border: 1px solid #ccc;
-      float: left;
-      width: fit-content;
-      height: fit-content;
-      margin-left: 5%;
-      margin-top: 2%;
-      margin-bottom: 3%;
-    }
-    
-    div.gallery:hover {
-      border: 1px solid #777;
-    }
-    
-    div.gallery img {
-      width: 100%;
-    
-    
-    }
-    
-    div.desc {
-      padding: 25px;
-      text-align: center;
-      font-size: x-large;
-  
-    }
-    </style>
 
 
-    <h2> Gallery</h2>
-    <hr>
+    <h2 style="margin-left: 2%;"> Gallery</h2>
 
     {% if location_images %}
     

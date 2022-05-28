@@ -3,16 +3,6 @@
   font-family: "Poppins" , sans-serif;
 }
 
-
-footer::before{
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 100px;
-  height: 1px;
-  width: 100%;
-  background: #AFAFB6;
-}
 footer .content{
   max-width: 1250px;
   margin: auto;
@@ -227,3 +217,30 @@ footer .bottom-details .bottom_text{
     width: 100%;
   }
 }
+div.gallery {
+    margin: 6px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 500px;
+    height: fit-content;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    
+    
+  
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+  }
+  
+  div.desc {
+    padding: 25px;
+    text-align: center;
+    font-size: x-large;
+
+  }
