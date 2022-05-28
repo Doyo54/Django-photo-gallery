@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <h2 style="margin-left: 2%;"> Gallery</h2>
+
+    {% if images %}
+    <h2 class="text-center" id="found">Found {{ images|length }} images in '{{message}}' category</h2>
+    {% else %}
+    <h2 class="text-center" id="foundnon"> Found 0 images for your search {{message}}</h2>
+
+    <a class="d-block mx-auto" href="/">
+        <button class="btn btn-sm btn-info d-block mx-auto">Back Home</button>
+    </a>
+    {% endif %}
+
+    {% if images %}
+    
+
+        {% for image in images %}
+
+        <div class="gallery">          
+            <img  src="{{image.image.url }}" class="img-responsive" alt="Image" style="height: 500px; width:fit-content;">
+              <div class="desc">{{image.description}}</div>
+            </div>
+
+
+        {% endfor %}
+
+    {% endif %}
+
+
+
+{% endblock %}

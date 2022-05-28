@@ -6,15 +6,15 @@
 
       <header class="site-header">
 
-              <div class="col-md-6">
-            <div class="hero-copy" style="font-size:40px;position: absolute; left: 30%;">
-              <h1 stle="font-size:60px;"class="hero-title mt-0">WELCOME TO PHOTO GALLERY</h1>
+            <div class="col-md-6">
+            <div style="font-size:25px; width: 100%; margin-top: 30%;">
+              <h1 class="hero-title">WELCOME TO PHOTO GALLERY</h1>
               <p class="hero-paragraph">Here you can view photos from different categories and Locations.Scroll down to view more!!</p>
               <div class="hero-cta"><a class="button button-shadow" href="#">Learn more</a><a class="button button-primary button-shadow" href="#">Contact Us</a></div>
             </div>
             </div>
             <div class="col-md-6">
-              <img style="height: 700px; margin-left:20%;" src="/media/image/iphone-mockup.png" alt="">
+              <img style="height: 650px;margin-left: 10%;  margin-top: 10%;" src="/media/image/iphone-mockup.png" alt="">
             </div>
             
          
@@ -63,9 +63,13 @@
           </section>
       </main>
 
+      <div class="about">
+        <h4>ABOUT US</h4>
+        <p>When with us, you are part of commited colaborators.All aspects of our software development processes are intergrated, interactive <br>and agile.<br>Our approach unifies designs, development and product management to create exceptional products<br>We start each project by understanding your business goals, the user's needs and the product requirements.<br>Then we help them translate them into effective and elegant solutions.</p>
+    </div>
   
           
-
+<h2 style="text-align: center;">Gallery</h2>
 {% for image in image %}
       <div class="gallery">          
         <img  src="{{image.image.url }}" class="img-responsive" alt="Image" style="height: 500px;">

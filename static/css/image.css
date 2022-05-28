@@ -25,7 +25,7 @@ button {
 #cover {
 
 float: right;
-  width: 570px;
+  width: 700px;
   background-color: #ff7575;
   border-radius: 20px;
   box-shadow: 0 10px 40px #ff7c7c, 0 0 0 15px #ffffffeb;
@@ -132,6 +132,17 @@ button span:after {
   right: -6px;
   width: 40px;
   background-color: #fff;
+}
+.about{
+  text-align: center;
+  height: 390px;
+  padding: 30px;
+  line-height: 200%;
+  font-size: x-large;
+}
+h4 {
+  text-align: center;
+  font-size: x-large;
 }
 
 
