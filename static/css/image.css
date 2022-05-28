@@ -24,8 +24,8 @@ button {
 
 #cover {
 
-float: right;
-  width: 700px;
+
+  width: 750px;
   background-color: #ff7575;
   border-radius: 20px;
   box-shadow: 0 10px 40px #ff7c7c, 0 0 0 15px #ffffffeb;
@@ -44,7 +44,8 @@ input[type="text"] {
 }
 
 input[type="text"]::placeholder {
-  color: #e16868;
+  color: black;
+  text-align: center;
 }
 
 #s-cover {
@@ -135,7 +136,6 @@ button span:after {
 }
 .about{
   text-align: center;
-  height: 390px;
   padding: 30px;
   line-height: 200%;
   font-size: x-large;
