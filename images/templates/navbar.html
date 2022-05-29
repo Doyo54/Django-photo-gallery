@@ -10,20 +10,22 @@
 </head>
 <body>
   
-    <ul class="nav nav-tabs navbar-inverse" style="font-size: xx-large; text-decoration: none;">  
+    <ul class="navbar navbar-inverse" style="font-size: xx-large; text-decoration: none; padding: 0px;">  
       
-        <li style="margin-top: 1%; margin-left: 10%;" role="presentation"><a href="/">Home</a></li>
-        <li style="margin-top: 1%; margin-left: 5%;" role="presentation" class="dropdown">
+        <a  style="margin-left: 10%;" href="/">Home</a></li>
+    
+          <div class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               Category
             </a>
-            <ul class="dropdown-menu">
-                <li role="presentation"><a href="/category/Travel">Travel</a></li>
-                <li role="presentation"><a href="/category/Food">Food</a></li>
-              
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="/category/Travel">Travel</a></li>
+              <li><a class="dropdown-item" href="/category/Food">Food</a></li>
+    
             </ul>
-          </li>
-          <li style="margin-top:1%; margin-left: 5%;" role="presentation" class="dropdown">
+          </div>
+        
+          <div class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               Location
             </a>
@@ -35,7 +37,7 @@
               
               
             </ul>
-          </li>
+          </div>
           
             <div id="cover">
               <form method="get" action="/search">

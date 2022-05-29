@@ -71,52 +71,62 @@
           
 <h2 style="text-align: center;">Gallery</h2>
 {% for image in image %}
-      <div class="gallery">       
-        <img id="myBtn" src="{{image.image.url }}" class="img-responsive" alt="Image" style="height: 500px;">
-          <div class="desc">{{image.description}}</div>
+      <div class="gallery" data-toggle="modal" data-target="#{{image.id}}" id = "myBtn">
+        <a href="/category/{{image.category}}">   
+        <img src="{{image.image.url }}" class="img-responsive" alt="Image" style="height: 500px;">
+        </a>
         </div>
 
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
+                <p class="imgdesc text-center">{{image.description}}</p>
+                <span class="btn btn-sm btn-outline-success">{{image.category}}</span> <a
+                    href="/location/{{image.location}}" class="btn btn-sm btn-outline-info">{{image.location}}</a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
 
   {% empty %}
   <div class="row">
     <h2 class="text-center">There No images</h2>
   </div>
   {% endfor %}
-  <div id="myModal" class="modal">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
-    </div>
-  
-  </div>
 <script>
 // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+document.getElementById("myBtn").addEventListener('click',function(){
+  document.getElementById("myModal").style.display = 'flex';
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+);
+document.querySelector(".close").addEventListener('click',function(){
+  document.getElementById("myModal").style.display = 'none';
 }
 
+);
+
+var modal = document.getElementById('myModal')
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 </script>
 
 
