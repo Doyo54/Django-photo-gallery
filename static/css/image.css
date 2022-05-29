@@ -22,16 +22,6 @@ button {
   background-color: transparent;
 }
 
-#cover {
-
-
-  width: 750px;
-  background-color: #ff7575;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px #ff7c7c, 0 0 0 15px #ffffffeb;
-  transform: scale(0.6);
-}
-
 form {
   height:fit-content;
 }
@@ -41,11 +31,14 @@ input[type="text"] {
   height: 96px;
   font-size: 60px;
   line-height: 1;
+
 }
 
 input[type="text"]::placeholder {
-  color: black;
+
   text-align: center;
+
+
 }
 
 #s-cover {

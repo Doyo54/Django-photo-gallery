@@ -10,12 +10,12 @@
 </head>
 <body>
   
-    <ul class="navbar navbar-inverse" style="font-size: xx-large; text-decoration: none; padding: 0px;">  
+    <ul class="navbar navbar-inverse" style="font-size: xx-large; text-decoration: none; padding: 0%;">  
       
-        <a  style="margin-left: 10%;" href="/">Home</a></li>
+        <a  style="color: white;" href="/">Home</a></li>
     
           <div class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="dropdown-toggle" style="color: white;" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               Category
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -26,7 +26,7 @@
           </div>
         
           <div class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a class="dropdown-toggle" style="color: white;" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               Location
             </a>
             <ul class="dropdown-menu">
@@ -39,10 +39,15 @@
             </ul>
           </div>
           
-            <div id="cover">
+            <div class="cover" style="
+              width: 750px;
+              background-color:#191970;
+              border-radius: 20px;
+              box-shadow: 0 10px 40px #191970, 0 0 0 10px #ffffffeb;
+              transform: scale(0.6);">
               <form method="get" action="/search">
                 <div class="tb">
-                  <div class="td"><input type="text" placeholder="Search Image Category" name="search" required></div>
+                  <div class="td"><input type="text" placeholder="Search Image Category" name="search" required style="color: white;"></div>
                   <div class="td" id="s-cover">
                     <button type="submit">
                       <div id="s-circle"></div>
