@@ -3,7 +3,7 @@ from django.test import TestCase
 from .models import Image, Category, Location
 
 
-class TestImage(TestCase):
+class testImage(TestCase):
     def setUp(self):
         self.location = Location(location='Nairobi')
         self.location.save_location()
@@ -38,4 +38,22 @@ class TestImage(TestCase):
         Location.objects.all().delete()
         Category.objects.all().delete()
 
+
+class testLocation(TestCase):
+    def setUp(self):
+        self.location = Location(location='Nairobi')
+        self.location.save_location()
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.location, Location))
+
+    def test_save_location(self):
+        self.location.save_location()
+        locations = Location.get_locations()
+        self.assertTrue(len(locations) > 0)
+
+    def test_delete_location(self):
+        self.location.delete_location()
+        location = Location.objects.all()
+        self.assertTrue(len(location) == 0)
 
