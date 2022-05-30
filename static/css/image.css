@@ -35,7 +35,7 @@ input[type="text"] {
 }
 
 input[type="text"]::placeholder {
-
+  color:white;
   text-align: center;
 
 
@@ -383,3 +383,4 @@ div.gallery {
   .myModal{
     display: none;
   }
+ 
